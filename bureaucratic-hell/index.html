@@ -11,7 +11,7 @@
 </head>
 
 <body class="bg-[url('../assets/windows-xp-bg.jpg')] bg-cover bg-center min-h-screen">
-    <h1 class="font-bold text-4xl text-center py-4 font-ms! text-[#121212]">Bureaucratic Hell </h1>
+    <h1 class="text-4xl text-center py-4 title-bar-text">Bureaucratic Hell </h1>
     <div class=" text-center flex justify-center">
         <!--Volume Selector Window-->
         <div class="window w-[300px]" id="volume-selector-window">
@@ -344,7 +344,8 @@
                 <div class="window-body flex flex-col justify-between items-center">
                     <div class="flex items-center">
                         <img src="./assets/icons/warning.png" class="w-14">
-                        <p>Windows requires administrator permission to change your system's volume. Please enter the
+                        <p>Windows requires administrator <strong>permission</strong> to change your system's volume.
+                            Please enter the
                             administrators password.</p>
                     </div>
                     <div class="flex justify-between w-full mt-4">
@@ -393,7 +394,7 @@
                 <div class="window-body flex flex-col justify-between items-center">
                     <div class="flex items-center">
                         <img src="./assets/icons/warning.png" class="w-14">
-                        <p>Password Hint: The first four numbers of your keyboard</p>
+                        <p>Password Hint: The password is <strong>emphasized</strong> in the previous window</p>
                     </div>
                     <button id="security-hint-popup-btn">Close</button>
                 </div>

@@ -108,7 +108,7 @@ function loadSecurityPage() {
 
     securityPage.classList.remove("hidden")
 
-    const correctPW = "1234"
+    const correctPW = "permission"
     function securityButtonClick() {
         if (securityInput.value == correctPW) {
             openSuccessPage()
