@@ -82,13 +82,11 @@ function loadLoadingBar() {
         loadingBar.value = counter
         counter++
 
-        console.log(counter)
-
         if (counter == target) {
             clearInterval(loadingProgressLoop)
             loadSecurityPage()
         }
-    }, 175);
+    }, 125);
 
     function loadingCancelBtnClick() {
         location.reload()
