@@ -85,9 +85,8 @@ function loadLoadingBar() {
         console.log(counter)
 
         if (counter == target) {
-            // Show admin password popup
-            console.log("Target met")
             clearInterval(loadingProgressLoop)
+            loadSecurityPage()
         }
     }, 175);
 
@@ -95,4 +94,44 @@ function loadLoadingBar() {
         location.reload()
     }
     loadingCancelBtn.addEventListener("click", loadingCancelBtnClick)
+}
+
+// Security Page
+function loadSecurityPage() {
+    const securityPage = document.getElementById("security-page")
+    const securityInput = document.getElementById("security-input")
+    const securityButton = document.getElementById("security-submit")
+    const securityHintLink = document.getElementById("security-hint-link")
+    const securityHintPopup = document.getElementById("security-hint-popup")
+    const securityHintPopupBtn = document.getElementById("security-hint-popup-btn")
+    const securityIncorrectPopup = document.getElementById("security-incorrect-popup")
+    const securityIncorrectPopupBtn = document.getElementById("security-incorrect-popup-btn")
+
+    securityPage.classList.remove("hidden")
+
+    const correctPW = "1234"
+    function securityButtonClick() {
+        if (securityInput.value == correctPW) {
+            // Proceed to next page
+            console.log("correct")
+        } else {
+            securityIncorrectPopup.classList.remove("hidden")
+        }
+    }
+    securityButton.addEventListener("click", securityButtonClick)
+
+    function securityHintLinkClick() {
+        securityHintPopup.classList.remove("hidden")
+    }
+    securityHintLink.addEventListener("click", securityHintLinkClick)
+
+    function securityIncorrectPopupBtnClose() {
+        securityIncorrectPopup.classList.add("hidden")
+    }
+    securityIncorrectPopupBtn.addEventListener("click", securityIncorrectPopupBtnClose)
+
+    function securityHintPopupClose() {
+        securityHintPopup.classList.add("hidden")
+    }
+    securityHintPopupBtn.addEventListener("click", securityHintPopupClose)
 }

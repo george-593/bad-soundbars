@@ -331,6 +331,74 @@
 
             </div>
         </div>
+
+        <!--Security Warning-->
+        <div class="hidden fixed left-2/3 top-52 z-11 flex items-center justify-center" id="security-page">
+            <div class="window w-[300px]">
+                <div class=" title-bar">
+                    <div class="title-bar-text">Security Warning!</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body flex flex-col justify-between items-center">
+                    <div class="flex items-center">
+                        <img src="./assets/icons/warning.png" class="w-14">
+                        <p>Windows requires administrator permission to change your system's volume. Please enter the
+                            administrators password.</p>
+                    </div>
+                    <div class="flex justify-between w-full mt-4">
+                        <div>
+                            <label for="security-input">Password: </label>
+                            <input id="security-input" type="text" autocomplete="off" />
+                        </div>
+                        <button id="security-submit">Submit</button>
+                    </div>
+                    <div class="flex justify-start w-full">
+                        <span class="text-blue-400 hover:underline" id="security-hint-link">Password Hint</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Security Incorrect Password-->
+        <div class="hidden fixed left-[30%] top-[60%] z-11 flex items-center justify-center"
+            id="security-incorrect-popup">
+            <div class="window w-[500px]">
+                <div class=" title-bar">
+                    <div class="title-bar-text">Incorrect Password</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body flex flex-col justify-between items-center">
+                    <div class="flex items-center">
+                        <img src="./assets/icons/error.png" class="w-22">
+                        <p>The password is incorrect. Please retype your password. Letters in passwords must be typed
+                            using the correct case.</p>
+                    </div>
+                    <button id="security-incorrect-popup-btn">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Security Hint-->
+        <div class="hidden fixed left-[30%] top-[40%] z-11 flex items-center justify-center" id="security-hint-popup">
+            <div class="window w-[400px]">
+                <div class=" title-bar">
+                    <div class="title-bar-text">Password Hint</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body flex flex-col justify-between items-center">
+                    <div class="flex items-center">
+                        <img src="./assets/icons/warning.png" class="w-14">
+                        <p>Password Hint: The first four numbers of your keyboard</p>
+                    </div>
+                    <button id="security-hint-popup-btn">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script src=" ./js/bh.js"></script>
 </body>
