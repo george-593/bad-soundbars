@@ -185,6 +185,30 @@
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
+  .top-16 {
+    top: calc(var(--spacing) * 16);
+  }
+  .top-32 {
+    top: calc(var(--spacing) * 32);
+  }
+  .top-40 {
+    top: calc(var(--spacing) * 40);
+  }
+  .top-44 {
+    top: calc(var(--spacing) * 44);
+  }
+  .top-52 {
+    top: calc(var(--spacing) * 52);
+  }
+  .left-1\/3 {
+    left: calc(1/3 * 100%);
+  }
+  .left-4 {
+    left: calc(var(--spacing) * 4);
+  }
+  .left-32 {
+    left: calc(var(--spacing) * 32);
+  }
   .z-10 {
     z-index: 10;
   }
