@@ -1,29 +1,32 @@
+// Variables for all main pages
+const voluemSelectorPage = document.getElementById("volume-selector-window")
+const tncPage = document.getElementById("tandc-window");
+const loadingPage = document.getElementById("loading-page")
+const securityPage = document.getElementById("security-page")
+
 // Volume Selector Confirm Popup
 const submitBtn = document.getElementById('volume-btn-submit');
 const volumeInput = document.getElementById('volume-selector');
-const modal = document.getElementById('modal');
-const modalText = document.getElementById('modal-text');
-const modalClose = document.getElementById('modal-close-btn');
-const modalCancel = document.getElementById('modal-cancel');
-const modalConfirm = document.getElementById('modal-confirm');
+const confirmWindow = document.getElementById('modal');
+const confirmWindowText = document.getElementById('modal-text');
+const confirmWindowCancelBtn = document.getElementById('modal-cancel');
+const ConfirmWindowConfirmBtn = document.getElementById('modal-confirm');
 
-function openModal() {
-    modalText.textContent = `Set volume to ${volumeInput.value}?`;
-    modal.classList.remove('hidden');
+function openConfirmation() {
+    confirmWindowText.textContent = `Set volume to ${volumeInput.value}?`;
+    confirmWindow.classList.remove('hidden');
 }
-function closeModal() {
-    modal.classList.add('hidden');
+function closeConfirmation() {
+    confirmWindow.classList.add('hidden');
 }
 
-submitBtn.addEventListener('click', openModal);
-modalClose.addEventListener('click', closeModal);
-modalCancel.addEventListener('click', closeModal);
+submitBtn.addEventListener('click', openConfirmation);
+confirmWindowCancelBtn.addEventListener('click', closeConfirmation);
 
-modalConfirm.addEventListener('click', openTnC);
+ConfirmWindowConfirmBtn.addEventListener('click', openTnC);
 
 // Terms and conditions 
 function openTnC() {
-    const tncWindow = document.getElementById("tandc-window");
     const scrollText = document.getElementById("tandc-scroll-text");
     const tncButton = document.getElementById("tandc-btn");
     const tncCheckBox = document.getElementById("tandc-checkbox")
@@ -31,7 +34,7 @@ function openTnC() {
     const tncPopup = document.getElementById("tandc-popup")
     const tncPopupCountdown = document.getElementById("tandc-close-sec")
 
-    tncWindow.classList.remove("hidden");
+    tncPage.classList.remove("hidden");
 
     // Scroll detection
     const tolerance = 5;
@@ -69,7 +72,6 @@ function openTnC() {
 
 // Loading Bar Page
 function loadLoadingBar() {
-    const loadingPage = document.getElementById("loading-page")
     const loadingBar = document.getElementById("load-bar")
     const loadingCancelBtn = document.getElementById("load-cancel")
 
@@ -96,7 +98,6 @@ function loadLoadingBar() {
 
 // Security Page
 function loadSecurityPage() {
-    const securityPage = document.getElementById("security-page")
     const securityInput = document.getElementById("security-input")
     const securityButton = document.getElementById("security-submit")
     const securityHintLink = document.getElementById("security-hint-link")
