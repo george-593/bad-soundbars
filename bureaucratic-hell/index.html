@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/xp.css" />
+    <link rel="stylesheet" href="./css/tw-output-o.css">
+    <title>Bureaucratic Hell</title>
+</head>
+
+<body class="">
+    <h1 class="font-bold text-4xl text-center my-4 font-ms">Bureaucratic Hell </h1>
+    <div class=" text-center flex justify-center">
+        <!--Volume Selector Window-->
+        <div class="window w-[300px]">
+            <div class="title-bar">
+                <div class="title-bar-text">Volume Selector</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body flex flex-row justify-around items-end">
+                <div class="field-row">
+                    <label for="range28">Volume</label>
+                    <div class="is-vertical">
+                        <input id="volume-selector" class="has-box-indicator hover:cursor-pointer" type="range" min="0"
+                            max="100" step="1" value="50" />
+                    </div>
+                </div>
+                <div>
+                    <button id="volume-btn-submit">Submit</button>
+                </div>
+            </div>
+        </div>
+        <!-- Volume Selector Confirm Popup-->
+        <div id="modal" class="fixed inset-0 flex items-center justify-center z-10 hidden">
+            <div class="window w-[320px]">
+                <div class="title-bar">
+                    <div class="title-bar-text">Confirm Volume</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Close" id="modal-close-btn"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <p id="modal-text" class="mb-2">Set volume?</p>
+                    <div class="flex justify-end">
+                        <button id="modal-cancel" class="mr-2">Cancel</button>
+                        <button id="modal-confirm" class="px-3">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Terms and conditions window-->
+        <div id="tandc-window" class="hidden fixed inset-0 z-10 flex items-center justify-center">
+            <div class="window w-[440px]">
+                <div class="title-bar">
+                    <div class="title-bar-text">Terms and Conditions</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body flex flex-row justify-around items-end">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./js/bh.js"></script>
+</body>
+
+</html>
