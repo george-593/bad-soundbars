@@ -49,6 +49,7 @@ function openTnC() {
 
         if (checked) {
             // Move to next screen
+            loadLoadingBar();
         } else {
             // Show popup and then reload page
             tncPopup.classList.remove("hidden")
@@ -64,4 +65,34 @@ function openTnC() {
         }
     }
     tncButton.addEventListener("click", tncSubmit)
+}
+
+// Loading Bar Page
+function loadLoadingBar() {
+    const loadingPage = document.getElementById("loading-page")
+    const loadingBar = document.getElementById("load-bar")
+    const loadingCancelBtn = document.getElementById("load-cancel")
+
+    loadingPage.classList.remove("hidden")
+
+    var counter = 0
+    // TODO: Implement random number (js has dumb random function)
+    var target = 62
+    const loadingProgressLoop = setInterval(() => {
+        loadingBar.value = counter
+        counter++
+
+        console.log(counter)
+
+        if (counter == target) {
+            // Show admin password popup
+            console.log("Target met")
+            clearInterval(loadingProgressLoop)
+        }
+    }, 175);
+
+    function loadingCancelBtnClick() {
+        location.reload()
+    }
+    loadingCancelBtn.addEventListener("click", loadingCancelBtnClick)
 }

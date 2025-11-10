@@ -313,9 +313,23 @@
             </div>
         </div>
 
+        <!--Loading bar-->
+        <div class="hidden fixed inset-0 z-11 flex items-center justify-center" id="loading-page">
+            <div class="window w-[300px]">
+                <div class=" title-bar">
+                    <div class="title-bar-text">Loading...</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body flex flex-col justify-between items-center">
+                    <progress max="100" value="0" id="load-bar"></progress>
+                    <button class="mt-4 mb-1" id="load-cancel">Cancel</button>
+                </div>
 
-
-        <script src="./js/bh.js"></script>
+                <script src=" ./js/bh.js"></script>
 </body>
 
 </html>
