@@ -28,16 +28,41 @@ function openTnC() {
     const tncButton = document.getElementById("tandc-btn");
     const tncCheckBox = document.getElementById("tandc-checkbox")
 
-    if (tncWindow) tncWindow.classList.remove("hidden");
+    const tncPopup = document.getElementById("tandc-popup")
+    const tncPopupCountdown = document.getElementById("tandc-close-sec")
 
+    tncWindow.classList.remove("hidden");
+
+    // Scroll detection
     const tolerance = 5;
-
-    const handler = function () {
+    function scrollHandler() {
         if (scrollText.scrollTop + scrollText.clientHeight >= scrollText.scrollHeight - tolerance) {
             tncCheckBox.disabled = false
             tncButton.disabled = false;
-            scrollText.removeEventListener('scroll', handler);
+            scrollText.removeEventListener('scroll', scrollHandler);
         }
     };
-    scrollText.addEventListener('scroll', handler);
+    scrollText.addEventListener('scroll', scrollHandler);
+
+    // Submit button
+    function tncSubmit() {
+        const checked = tncCheckBox.checked
+
+        if (checked) {
+            // Move to next screen
+        } else {
+            // Show popup and then reload page
+            tncPopup.classList.remove("hidden")
+            let countdown = 4
+            setInterval(() => {
+                tncPopupCountdown.textContent = countdown
+                countdown--
+
+                if (countdown < 0) {
+                    location.reload()
+                }
+            }, 1000);
+        }
+    }
+    tncButton.addEventListener("click", tncSubmit)
 }
