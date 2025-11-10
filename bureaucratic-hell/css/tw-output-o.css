@@ -341,6 +341,12 @@
   .font-\[MS-Sans-Serif\] {
     font-family: MS-Sans-Serif;
   }
+  .font-\[TrebuchetMS-Bold\] {
+    font-family: TrebuchetMS-Bold;
+  }
+  .font-\[TrebuchetMS\] {
+    font-family: TrebuchetMS;
+  }
   .font-ms\! {
     font-family: var(--font-ms) !important;
   }

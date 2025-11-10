@@ -38,7 +38,6 @@ function openTnC() {
     function scrollHandler() {
         if (scrollText.scrollTop + scrollText.clientHeight >= scrollText.scrollHeight - tolerance) {
             tncCheckBox.disabled = false
-            tncButton.disabled = false;
             scrollText.removeEventListener('scroll', scrollHandler);
         }
     };
