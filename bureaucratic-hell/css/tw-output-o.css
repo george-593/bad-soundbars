@@ -10,13 +10,12 @@
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-gray-900: oklch(21% 0.034 264.665);
+    --color-white: #fff;
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-4xl: 2.25rem;
@@ -222,6 +221,9 @@
   .h-\[500px\] {
     height: 500px;
   }
+  .min-h-screen {
+    min-height: 100vh;
+  }
   .w-\[300px\] {
     width: 300px;
   }
@@ -285,6 +287,15 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
   }
+  .bg-\[url\(\'\.\.\/assets\/windows-xp-bg\.jpg\'\)\] {
+    background-image: url('../assets/windows-xp-bg.jpg');
+  }
+  .bg-cover {
+    background-size: cover;
+  }
+  .bg-center {
+    background-position: center;
+  }
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
@@ -293,6 +304,9 @@
   }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
+  }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
   }
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
@@ -309,8 +323,8 @@
   .text-center {
     text-align: center;
   }
-  .font-ms {
-    font-family: var(--font-ms);
+  .font-ms\! {
+    font-family: var(--font-ms) !important;
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -348,6 +362,9 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
+  .text-\[\#121212\] {
+    color: #121212;
+  }
   .text-gray-500 {
     color: var(--color-gray-500);
   }
@@ -356,6 +373,9 @@
   }
   .text-gray-900 {
     color: var(--color-gray-900);
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .transition {
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
