@@ -296,14 +296,16 @@
         <div id="tandc-popup" class="hidden fixed inset-0 z-11 flex items-center justify-center">
             <div class="window w-[300px] h-[150px]">
                 <div class="title-bar">
-                    <div class="title-bar-text">Invalid TOS Response</div>
+                    <div class="title-bar-text">Invalid T&C Response</div>
                     <div class="title-bar-controls">
                         <button aria-label="Close"></button>
                     </div>
                 </div>
-                <div class="window-body text-sm">
-                    <p>You didn't agree to the terms of service.</p>
-                    <br>
+                <div class="window-body text-sm flex flex-col justify-between h-[110px]">
+                    <div class="flex items-center">
+                        <img src="./assets/icons/error.png" class="w-22">
+                        <p>You didn't agree to the terms and conditions.</p>
+                    </div>
                     <p>Volume mixer will close in <span id="tandc-close-sec">5</span> seconds</p>
                 </div>
 
