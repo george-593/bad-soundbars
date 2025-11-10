@@ -1,5 +1,6 @@
 // Variables for all main pages
 const voluemSelectorPage = document.getElementById("volume-selector-window")
+const volumeConfirmPage = document.getElementById('modal');
 const tncPage = document.getElementById("tandc-window");
 const loadingPage = document.getElementById("loading-page")
 const securityPage = document.getElementById("security-page")
@@ -7,17 +8,16 @@ const securityPage = document.getElementById("security-page")
 // Volume Selector Confirm Popup
 const submitBtn = document.getElementById('volume-btn-submit');
 const volumeInput = document.getElementById('volume-selector');
-const confirmWindow = document.getElementById('modal');
 const confirmWindowText = document.getElementById('modal-text');
 const confirmWindowCancelBtn = document.getElementById('modal-cancel');
 const ConfirmWindowConfirmBtn = document.getElementById('modal-confirm');
 
 function openConfirmation() {
-    confirmWindowText.textContent = `Set volume to ${volumeInput.value}?`;
-    confirmWindow.classList.remove('hidden');
+    confirmWindowText.textContent = `Set volume to ${volumeInput.value}%?`;
+    volumeConfirmPage.classList.remove('hidden');
 }
 function closeConfirmation() {
-    confirmWindow.classList.add('hidden');
+    volumeConfirmPage.classList.add('hidden');
 }
 
 submitBtn.addEventListener('click', openConfirmation);
@@ -111,8 +111,7 @@ function loadSecurityPage() {
     const correctPW = "1234"
     function securityButtonClick() {
         if (securityInput.value == correctPW) {
-            // Proceed to next page
-            console.log("correct")
+            openSuccessPage()
         } else {
             securityIncorrectPopup.classList.remove("hidden")
         }
@@ -133,4 +132,29 @@ function loadSecurityPage() {
         securityHintPopup.classList.add("hidden")
     }
     securityHintPopupBtn.addEventListener("click", securityHintPopupClose)
+}
+
+// Success Page
+function openSuccessPage() {
+    const successPage = document.querySelector("#success-page")
+    const successPageRestartBtn = document.querySelector("#success-page-restart")
+
+    // Close all other pages in reverse order of opening with delay
+    securityPage.classList.add("hidden")
+    setTimeout(() => {
+        loadingPage.classList.add("hidden")
+    }, 750);
+    setTimeout(() => {
+        tncPage.classList.add("hidden")
+    }, 1500);
+    setTimeout(() => {
+        volumeConfirmPage.classList.add("hidden")
+    }, 2250);
+    setTimeout(() => {
+        voluemSelectorPage.classList.add("hidden")
+    }, 3000);
+    setTimeout(() => {
+        successPage.classList.remove("hidden")
+        successPageRestartBtn.addEventListener("click", () => { location.reload() })
+    }, 3750)
 }
