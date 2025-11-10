@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/xp.css" />
     <link rel="stylesheet" href="./css/tw-output-o.css">
+    <link rel="stylesheet" href="./css/scrollbar.css    ">
     <title>Bureaucratic Hell</title>
 </head>
 
-<body class="">
+<body>
     <h1 class="font-bold text-4xl text-center my-4 font-ms">Bureaucratic Hell </h1>
     <div class=" text-center flex justify-center">
         <!--Volume Selector Window-->
@@ -24,10 +25,10 @@
             </div>
             <div class="window-body flex flex-row justify-around items-end">
                 <div class="field-row">
-                    <label for="range28">Volume</label>
+                    <label for="volume-selector">Volume</label>
                     <div class="is-vertical">
                         <input id="volume-selector" class="has-box-indicator hover:cursor-pointer" type="range" min="0"
-                            max="100" step="1" value="50" />
+                            max="100" step="5" value="50" />
                     </div>
                 </div>
                 <div>
@@ -35,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <!-- Volume Selector Confirm Popup-->
+        <!-- Volume Selector Confirmation Popup-->
         <div id="modal" class="fixed inset-0 flex items-center justify-center z-10 hidden">
             <div class="window w-[320px]">
                 <div class="title-bar">
@@ -56,7 +57,7 @@
 
         <!--Terms and conditions window-->
         <div id="tandc-window" class="hidden fixed inset-0 z-10 flex items-center justify-center">
-            <div class="window w-[440px]">
+            <div class="window w-[600px] h-[500px]">
                 <div class="title-bar">
                     <div class="title-bar-text">Terms and Conditions</div>
                     <div class="title-bar-controls">
@@ -65,8 +66,225 @@
                         <button aria-label="Close"></button>
                     </div>
                 </div>
-                <div class="window-body flex flex-row justify-around items-end">
+                <div class="window-body flex flex-col justify-around items-end">
+                    <div class="h-[400px] overflow-auto p-3 leading-relaxed scrollbar-xp" id="tandc-scroll-text">
+                        <!--AI Generated Terms and Conditions   -->
+                        <h1 class="text-2xl! font-bold text-gray-900 mb-4 text-center">
+                            Terms and Conditions of Use
+                        </h1>
+                        <h2 class="text-lg! font-semibold text-gray-700 mb-8 text-center">
+                            Regarding the Audio-Dynamic-Control-Element ("Volume Slider")
+                        </h2>
 
+                        <p class="text-sm text-gray-500 mb-6"><strong>Last Updated:</strong> Monday Tenth of November,
+                            Two Thousand and Twenty Five</p>
+                        <p class="text-sm text-gray-500 mb-10"><strong>IMPORTANT:</strong> PLEASE READ THIS LEGAL
+                            AGREEMENT IN ITS ENTIRETY. IT CONSTITUTES A LEGALLY BINDING CONTRACT. BY VIEWING, HOVERING
+                            OVER, OR INTERACTING WITH THE VOLUME SLIDER, YOU ("THE USER") HEREBY AGREE TO ALL
+                            STIPULATIONS, PROVISIONS, AND ABSURDITIES CONTAINED WITHIN.</p>
+
+                        <!-- Section 1: Definitions -->
+                        <div class="mb-10">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4 border-b pb-2">Article 1: Definitions
+                            </h3>
+                            <ul class="list-disc list-inside space-y-3 pl-4 text-gray-700">
+                                <li><strong>1.1 "The Slider":</strong> Refers to the singular graphical user interface
+                                    element, typically composed of a linear or circular track and a movable indicator
+                                    (the "Knob"), designed for the sole purpose of modulating acoustic energy output.
+                                </li>
+                                <li><strong>1.2 "The Knob":</strong> The digital, intangible, metaphorical, and legally
+                                    distinct movable component of "The Slider" which The User manipulates.</li>
+                                <li><strong>1.3 "The Act of Sliding":</strong> Any digital interaction, including but
+                                    not limited to, clicking, tapping, dragging, or employing keyboard inputs, that
+                                    results in the repositioning of "The Knob" upon its designated track.</li>
+                                <li><strong>1.4 "Volume":</strong> The perceived and/or actual quantitative level of
+                                    auditory output (sound pressure level) emitted from the User's sound-reproducing
+                                    hardware (speakers, headphones, etc.).</li>
+                                <li><strong>1.5 "Minimum Volume" (0%):</strong> Hereinafter referred to as "The State of
+                                    Digital Silence," "The Auditory Void," or "The Abyssal Null-Point." This state
+                                    represents the complete, or near-complete, cessation of modulated audio output.</li>
+                                <li><strong>1.6 "Maximum Volume" (100%):</strong> Hereinafter referred to as "The Zenith
+                                    of Auditory Output," "The Potential Tinnitus Threshold," or "The 'Are You Sure?'
+                                    Zone." This state represents the upper-most limit of audio gain controllable by The
+                                    Slider, irrespective of hardware limitations.</li>
+                                <li><strong>1.7 "Intermediate Values" (1-99%):</strong> The vast, nuanced, and perilous
+                                    territory between The Auditory Void and The Zenith. Each percentage point is
+                                    considered a unique and legally distinct "Volume State."</li>
+                                <li><strong>1.8 "The Company":</strong> The entity providing this Slider, whose
+                                    liability is maximally disclaimed herein.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Section 2: Acceptance and Binding Agreement -->
+                        <div class="mb-10">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4 border-b pb-2">Article 2: Acceptance of
+                                Terms</h3>
+                            <p class="mb-4"><strong>2.1 Binding Agreement:</strong> By clicking, tapping, dragging,
+                                hovering near, perceptually acknowledging, or otherwise interfacing with The Slider, The
+                                User confirms an irrevocable and binding acceptance of every term within this document.
+                                This agreement is formed in perpetuity, across all known and future dimensions.</p>
+                            <p class="mb-4"><strong>2.2 Implied Consent:</strong> Your continued viewing of the page
+                                upon which The Slider resides is considered implied consent. Your failure to immediately
+                                close this browser tab and discard your device in a vat of acid will be taken as full,
+                                enthusiastic agreement.</p>
+                            <p class="mb-4"><strong>2.3 Right to Modify:</strong> The Company reserves the right to
+                                modify, amend, delete, or transmogrify these terms at any time, without notice, even
+                                mid-slide. Your continued use of The Slider following such modifications constitutes
+                                your acceptance of the new, likely more draconian, terms.</p>
+                        </div>
+
+                        <!-- Section 3: User Obligations and Conduct -->
+                        <div class="mb-10">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-4 border-b pb-2">Article 3: User
+                                Obligations & Conduct</h3>
+                            <p class="mb-4"><strong>3.1 User Sanity and Sobriety:</strong> The User warrants that they
+                                are of sound mind, body, and legal age to operate complex audio-modulation equipment.
+                                The Slider shall not be operated while under the influence of substances that may impair
+                                judgment or rhythmic sensibility.</p>
+                            <p class="mb-4"><strong>3.2 Prohibition of Irresponsible Sliding:</strong> The User agrees
+                                not to engage in "Irresponsible Sliding." This includes, but is not limited to:
+                            <ul class="list-disc list-inside space-y-2 pl-8 my-4">
+                                <li>(a) The "DJ Scratch" Maneuver: Rapid, uncontrolled, back-and-forth manipulation of
+                                    The Knob for no discernible purpose.</li>
+                                <li>(b) "Volume-Jacking": Maliciously setting the volume to The Zenith immediately
+                                    before another individual uses the device.</li>
+                                <li>(c) "Volume-Peeking": Nudging The Knob from 0% to 1% and back repeatedly in a fit of
+                                    indecision.</li>
+                            </ul>
+                            </p>
+                            <p class="mb-4"><strong>3.3 Auditory Content Rights:</strong> The User represents and
+                                warrants that they possess all necessary rights, licenses, and permissions for the
+                                auditory content (music, video, podcast, annoying notification sound) being modulated.
+                                The Company holds no responsibility for copyright infringement committed via the act of
+                                "un-silencing" protected media.</p>
+                            <p class="mb-4"><strong>3.4 Respect for The Knob:</strong> The User shall treat The Knob
+                                with digital respect. Do not attempt to "pry" The Knob off its track, "polish" it with
+                                digital cleaning tools, or "screenshot" it in a compromising position.</p>
+                        </div>
+
+                        <!-- Section 4: Grant of License -->
+                        <div class="mb-10">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4 border-b pb-2">Article 4: Grant of
+                                License</h3>
+                            <p class="mb-4"><strong>4.1 Limited License to Adjust:</strong> The Company grants you, The
+                                User, a limited, non-exclusive, non-transferable, fully revocable license to *adjust*
+                                the Volume via The Slider.</p>
+                            <p class="mb-4"><strong>4.2 Scope of License:</strong> This license is strictly limited to
+                                the act of adjustment. It does not grant The User ownership of:
+                            <ul class="list-disc list-inside space-y-2 pl-8 my-4">
+                                <li>(a) The Volume State itself.</li>
+                                <li>(b) The sound waves being produced.</li>
+                                <li>(c) The digital "knob" or "track."</li>
+                                <li>(d) Any feelings of power or control derived from The Act of Sliding.</li>
+                            </ul>
+                            </p>
+                            <p class="mb-4"><strong>4.3 Revocation of License:</strong> The Company may revoke this
+                                license at any time, for any reason, including "sliding without rhythm" or "choosing a
+                                sub-optimal volume for the given social context." Upon termination, your Volume may be
+                                permanently locked at an inconvenient level (e.g., 3.7% or 98.2%).</p>
+                        </div>
+
+                        <!-- Section 5: Disclaimers and Limitation of Liability -->
+                        <div class="mb-10">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4 border-b pb-2">Article 5: Disclaimers &
+                                Limitation of Liability</h3>
+                            <p class="mb-4"><strong>5.1 "AS-IS" AND "AS-AVAILABLE" BASIS:</strong> THE SLIDER IS
+                                PROVIDED ON AN "AS-IS" AND "AS-AVAILABLE" BASIS. WE MAKE NO WARRANTIES THAT THE VOLUME
+                                YOU SELECT WILL ACCURATELY CORRESPOND TO THE VOLUME YOU RECEIVE. THE 50% MARK MAY NOT BE
+                                50% OF THE VOLUME. IT MAY BE 12% OR 88%. LIFE IS A MYSTERY.</p>
+                            <p class="mb-4"><strong>5.2 Sudden Loudness Disclaimer:</strong> The Company is not
+                                responsible or liable for any startle-induced injuries, including, but not limited to,
+                                minor heart palpitations, spilled beverages, falls from chairs, or sudden, startled
+                                exclamations that may be inappropriate for your current environment (e.g., a library, a
+                                funeral).</p>
+                            <p class="mb-4"><strong>5.3 Sudden Quietness Disclaimer:</strong> The Company is not
+                                responsible or liable for any anxiety, existential dread, feelings of profound
+                                isolation, or "is-this-thing-on?" confusion resulting from an abrupt, User-initiated
+                                transition to The Auditory Void.</p>
+                            <p class="mb-4"><strong>5.4 Hearing Loss Disclaimer:</strong> The User acknowledges that
+                                prolonged exposure to audio at The Zenith may result in permanent hearing damage
+                                (tinnitus). The User agrees that their ears are their own problem and indemnifies The
+                                Company from all claims related to audiological health.</p>
+                            <p class="mb-4"><strong>5.5 Social Ramifications Disclaimer:</strong> The Company is not
+                                liable for any domestic disputes, roommate conflicts, neighborly complaints, or
+                                termination of employment that may arise from The User's chosen Volume State.</p>
+                            <p class="mb-4"><strong>5.6 LIMITATION OF LIABILITY:</strong> TO THE FULLEST EXTENT
+                                PERMITTED BY LAW, THE COMPANY'S TOTAL CUMULATIVE LIABILITY IN ANY MATTER RELATED TO YOUR
+                                USE OF THE VOLUME SLIDER IS STRICTLY LIMITED TO ZERO DOLLARS AND ZERO CENTS ($0.00). IF
+                                YOU ARE DISSATISFIED, YOUR SOLE REMEDY IS TO CEASE SLIDING.</p>
+                        </div>
+
+                        <!-- Section 6: Intellectual Property -->
+                        <div class="mb-10">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4 border-b pb-2">Article 6: Intellectual
+                                Property</h3>
+                            <p class="mb-4"><strong>6.1 Ownership of The Slider:</strong> The "look and feel" of The
+                                Slider, including its precise shade of gray, the pixel-perfect curvature of The Knob,
+                                the tactile "feel" (if any) of its movement, and the linear path upon which it travels,
+                                are the exclusive intellectual property of The Company and are protected by universal
+                                copyright and trade secret laws.</p>
+                            <p class="mb-4"><strong>6.2 Prohibition on Reproduction:</strong> The User agrees not to
+                                reproduce, sketch, or describe The Slider in excessive detail in any public or private
+                                forum. Any attempt to create a "derivative" slider will be met with the full, ambiguous
+                                force of the law.</p>
+                        </div>
+
+                        <!-- Section 7: The "Mute" Button -->
+                        <div class="mb-10">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4 border-b pb-2">Article 7: The "Mute"
+                                Button</h3>
+                            <p class="mb-4"><strong>7.1 A Separate and Sinister Entity:</strong> The User acknowledges
+                                that any "Mute" button, icon, or function, even if visually adjacent to The Slider, is a
+                                separate, legally distinct, and potentially malevolent entity. These Terms do *not*
+                                govern the "Mute" button.</p>
+                            <p class="mb-4"><strong>7.2 No Affiliation:</strong> We do not speak of the Mute button. We
+                                do not associate with it. Its binary, all-or-nothing approach is antithetical to the
+                                nuanced, analog-like grace of The Slider. Do not ask us about the Mute button.</p>
+                        </div>
+
+                        <!-- Section 8: Indemnification -->
+                        <div class="mb-10">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4 border-b pb-2">Article 8:
+                                Indemnification</h3>
+                            <p class="mb-4">The User agrees to indemnify, defend, and hold harmless The Company, its
+                                parent companies, subsidiaries, (non-existent) shareholders, and any electrons involved
+                                in the operation of The Slider, from any and all claims, damages, losses, and
+                                liabilities arising from The User's *specific choice* of volume level. This includes,
+                                but is not limited to, claims of "poor taste in music," "inappropriate volume for 3:00
+                                AM," or "ruining the dramatic tension of a movie."</p>
+                        </div>
+
+                        <!-- Section 9: Governing Law & Miscellaneous -->
+                        <div class="mb-10">
+                            <h3 class="text-2xl font-semibold text-gray-900 mb-4 border-b pb-2">Article 9: Governing Law
+                                & Miscellaneous</h3>
+                            <p class="mb-4"><strong>9.1 Governing Law:</strong> These terms shall be governed by the
+                                laws of physics, specifically those pertaining to acoustics and wave propagation, as
+                                well as, secondarily, the laws of an obscure, uninhabited island to be chosen at our
+                                discretion at the time of the dispute.</p>
+                            <p class="mb-4"><strong>9.2 Severability:</strong> If any provision of this Agreement is
+                                found to be nonsensical, unenforceable, or just plain silly, the remaining provisions
+                                shall continue in full force and effect, and the nonsensical provision will be replaced
+                                by one that is even more so, yet technically legal.</p>
+                            <p class="mb-4"><strong>9.3 Entire Agreement:</strong> This document constitutes the entire
+                                agreement between The User and The Company regarding The Slider. All other promises,
+                                discussions, or representations (e.g., a "tooltip" that says "Adjust Volume") are
+                                superseded by this document.</p>
+                            <p class="mb-4"><strong>9.4 Haptic Feedback:</strong> Any "haptic feedback" The User may or
+                                may not feel while interacting with The Slider is purely a figment of The User's
+                                imagination, a placebo effect, or a minor electrical fault in their device. It is not a
+                                feature.</p>
+                        </div>
+
+                    </div>
+                    <div class="flex justify-between w-full py-6 px-2">
+                        <div>
+                            <input disabled type="checkbox" id="tandc-checkbox">
+                            <label for="tandc-checkbox">I have read, understood, and agree to the absurdly long
+                                Terms and Conditions for the Volume Slider.</label>
+                        </div>
+                        <button disabled id="tandc-btn">Submit</button>
+                    </div>
                 </div>
             </div>
         </div>

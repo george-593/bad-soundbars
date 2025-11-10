@@ -1,0 +1,57 @@
+/* Windows XP style scrollbar */
+/* AI GENERATED */
+.xp-scrollbar::-webkit-scrollbar {
+    width: 17px;
+    height: 17px;
+}
+
+.xp-scrollbar::-webkit-scrollbar-track {
+    background-color: #dfdfdf;
+}
+
+
+.xp-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0;
+    border: 1px solid;
+    border-color: #f0f0f0 #808080 #808080 #f0f0f0;
+}
+
+.xp-scrollbar::-webkit-scrollbar-button {
+    background-color: #c0c0c0;
+    border: 1px solid;
+    border-color: #f0f0f0 #808080 #808080 #f0f0f0;
+    display: block;
+    height: 16px;
+    width: 16px;
+}
+
+.xp-scrollbar::-webkit-scrollbar-button:vertical:start:increment,
+.xp-scrollbar::-webkit-scrollbar-button:vertical:end:decrement,
+.xp-scrollbar::-webkit-scrollbar-button:horizontal:start:increment,
+.xp-scrollbar::-webkit-scrollbar-button:horizontal:end:decrement {
+    display: none;
+}
+
+.xp-scrollbar::-webkit-scrollbar-button:vertical:start {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='rgb(0,0,0)'%3E%3Cpath d='M8 4l-4 4h8z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center 5px;
+}
+
+.xp-scrollbar::-webkit-scrollbar-button:vertical:end {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='rgb(0,0,0)'%3E%3Cpath d='M8 12l4-4H4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center 5px;
+}
+
+.xp-scrollbar::-webkit-scrollbar-button:horizontal:start {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='rgb(0,0,0)'%3E%3Cpath d='M12 8l-4 4V4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 5px center;
+}
+
+.xp-scrollbar::-webkit-scrollbar-button:horizontal:end {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='rgb(0,0,0)'%3E%3Cpath d='M4 8l4 4V4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 5px center;
+}
