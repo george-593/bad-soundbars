@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  },
+  "scripts": {
+    "tw-bure": "npx @tailwindcss/cli -i ./bureaucratic-hell/css/tw-input.css -o ./bureaucratic-hell/css/tw-output-o.css --watch"
+  }
+}
