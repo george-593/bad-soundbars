@@ -42,9 +42,19 @@ function openTnC() {
     // Scroll detection
     const tolerance = 5;
     function scrollHandler() {
+        // Check if we have reched the bottom
         if (scrollText.scrollTop + scrollText.clientHeight >= scrollText.scrollHeight - tolerance) {
             tncCheckBox.disabled = false
             scrollText.removeEventListener('scroll', scrollHandler);
+        }
+
+        // Sometimes scroll back up "glitchy effect"
+        let chance = Math.random()
+        // 1.25% chance
+        console.log(chance)
+        if (chance > 0.9875) {
+            console.log("scrolling")
+            scrollText.scrollBy(0, -200)
         }
     };
     scrollText.addEventListener('scroll', scrollHandler);
