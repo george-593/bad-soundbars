@@ -51,9 +51,7 @@ function openTnC() {
         // Sometimes scroll back up "glitchy effect"
         let chance = Math.random()
         // 1.25% chance
-        console.log(chance)
         if (chance > 0.9875) {
-            console.log("scrolling")
             scrollText.scrollBy(0, -150)
         }
     };
