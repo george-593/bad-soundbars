@@ -6,24 +6,27 @@ const loadingPage = document.getElementById("loading-page")
 const securityPage = document.getElementById("security-page")
 
 // Volume Selector Confirm Popup
-const submitBtn = document.getElementById('volume-btn-submit');
-const volumeInput = document.getElementById('volume-selector');
-const confirmWindowText = document.getElementById('modal-text');
-const confirmWindowCancelBtn = document.getElementById('modal-cancel');
-const ConfirmWindowConfirmBtn = document.getElementById('modal-confirm');
+function voluemSelector() {
+    const submitBtn = document.getElementById('volume-btn-submit');
+    const volumeInput = document.getElementById('volume-selector');
+    const confirmWindowText = document.getElementById('modal-text');
+    const confirmWindowCancelBtn = document.getElementById('modal-cancel');
+    const ConfirmWindowConfirmBtn = document.getElementById('modal-confirm');
 
-function openConfirmation() {
-    confirmWindowText.textContent = `Set volume to ${volumeInput.value}%?`;
-    volumeConfirmPage.classList.remove('hidden');
+    function openConfirmation() {
+        confirmWindowText.textContent = `Set volume to ${volumeInput.value}%?`;
+        volumeConfirmPage.classList.remove('hidden');
+    }
+    function closeConfirmation() {
+        volumeConfirmPage.classList.add('hidden');
+    }
+
+    submitBtn.addEventListener('click', openConfirmation);
+    confirmWindowCancelBtn.addEventListener('click', closeConfirmation);
+
+    ConfirmWindowConfirmBtn.addEventListener('click', openTnC);
 }
-function closeConfirmation() {
-    volumeConfirmPage.classList.add('hidden');
-}
-
-submitBtn.addEventListener('click', openConfirmation);
-confirmWindowCancelBtn.addEventListener('click', closeConfirmation);
-
-ConfirmWindowConfirmBtn.addEventListener('click', openTnC);
+voluemSelector()
 
 // Terms and conditions 
 function openTnC() {
