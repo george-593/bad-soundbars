@@ -54,7 +54,7 @@ function openTnC() {
         console.log(chance)
         if (chance > 0.9875) {
             console.log("scrolling")
-            scrollText.scrollBy(0, -200)
+            scrollText.scrollBy(0, -150)
         }
     };
     scrollText.addEventListener('scroll', scrollHandler);
