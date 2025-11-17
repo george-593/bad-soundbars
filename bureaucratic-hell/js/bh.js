@@ -51,8 +51,8 @@ function openTnC() {
         // Sometimes scroll back up "glitchy effect"
         let chance = Math.random()
         // 1.25% chance
-        if (chance > 0.9875) {
-            scrollText.scrollBy(0, -150)
+        if (chance < 0.025) {
+            scrollText.scrollBy(0, -250)
         }
     };
     scrollText.addEventListener('scroll', scrollHandler);
